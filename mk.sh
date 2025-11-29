@@ -8,10 +8,10 @@ fi
 dir="$1"
 
 
-mkdir -p "~/dev/comppro/atcoder/$dir" || { echo "ディレクトリ作成に失敗しました: ~/dev/comppro/atcoder/$dir"; exit 1; }
+mkdir -p "./atcoder/$dir" || { echo "ディレクトリ作成に失敗しました: ./atcoder/$dir"; exit 1; }
 
 for f in a.py b.py c.py; do
-  file="~/dev/comppro/atcoder/$dir/$f"
+  file="./atcoder/$dir/$f"
   if [ -e "$file" ]; then
     echo "既に存在します: $file"
   else
