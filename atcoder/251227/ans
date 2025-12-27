@@ -1,0 +1,9 @@
+n = int(input())
+q = []
+for v in list(map(int, input().split())):
+    q.append(v)
+    print(q)
+    if len(q) >= 4 and q[-1] == q[-2] == q[-3] == q[-4]:
+        for i in range(4):
+            q.pop()
+print(len(q))
