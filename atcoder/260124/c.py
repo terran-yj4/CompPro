@@ -9,7 +9,7 @@ from itertools import accumulate,combinations,permutations
 #accumulate(a)シーケンスaから累積イテレータを生成、通常はリスト化して前に[0]を置いて累積和に使用
 #combinations(a,k)シーケンスaからk個を選ぶ 組み合わせイテレータ
 #permutations(a,k)シーケンスaからk個を選ぶ 順列イテレータ
-from math import ceil,floor,sqrt,pi,factorial,gcd,log,log10,log2,inf
+from math import ceil,floor,sqrt,pi,factorial,gcd,log,log10,log2,inf, comb
 #ceil切り上げ、floor切り捨て、sqrt平方根、factorial階乗
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 MI = lambda :map(int,input().split())
@@ -23,3 +23,20 @@ pN = lambda :print("NO")
 py = lambda :print("Yes")
 pn = lambda :print("No")
 
+N, M = MI()
+
+d = defaultdict(list)
+
+for m in range(M):
+    A, B = MI()
+    d[A].append(B)
+    d[B].append(A)
+
+
+
+ans = []
+
+for n in range(1, N+1):
+    ans.append(str(comb(N - len(d[n]) - 1, 3)))
+    
+print(" ".join(ans))

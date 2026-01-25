@@ -14,7 +14,7 @@ from math import ceil,floor,sqrt,pi,factorial,gcd,log,log10,log2,inf
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 MI = lambda :map(int,input().split())
 
-ls = lambda :list(input().split())                      # 文字列リスト
+_ls = lambda :list(input().split())                      # 文字列リスト
 li = lambda :list(MI())                                 # 整数リスト
 ii = lambda :int(input())                                    # 整数
 inf = 1<<60
@@ -23,3 +23,26 @@ pN = lambda :print("NO")
 py = lambda :print("Yes")
 pn = lambda :print("No")
 
+
+N, Q = MI()
+A = li()
+
+R = [0]
+for a in A:
+    R.append(R[-1] + a)
+
+# print(R)
+
+
+
+for q in range(Q):
+    ls = _ls()
+    if ls[0] == "1":
+        x = int(ls[1])
+        d = R[x] - R[x-1]
+        R[x] = R[x+1] - d
+
+    else: # 2
+        l, r = int(ls[1]), int(ls[2])
+        ans = R[r] - R[l-1]
+        print(ans)

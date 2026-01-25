@@ -23,3 +23,23 @@ pN = lambda :print("NO")
 py = lambda :print("Yes")
 pn = lambda :print("No")
 
+q = ii()
+
+sounds = 0
+run = False
+
+for _ in range(q):
+    a = ii()
+    if a == 1:
+        sounds += 1
+    elif a == 2:
+        if sounds >= 1:
+            sounds -= 1
+    elif a == 3:
+        run = not run
+
+    if run and sounds >= 3:
+        py()
+    else:
+        pn()
+    

@@ -23,3 +23,7 @@ pN = lambda :print("NO")
 py = lambda :print("Yes")
 pn = lambda :print("No")
 
+S = input()
+
+l = list(S)
+print(l.count("i") + l.count("j"))
