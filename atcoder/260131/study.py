@@ -1,6 +1,6 @@
-from collections import deque
 l = [1, 2, 3]
 l.pop(0)    # O(N)
 
-q = deque(l)
-q.popleft() # (1)
+from collections import deque
+q = deque([1, 2, 3])
+q.popleft()  # O(1)
