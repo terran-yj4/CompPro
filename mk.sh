@@ -10,7 +10,7 @@ dir="$1"
 
 mkdir -p "./atcoder/$dir" || { echo "ディレクトリ作成に失敗しました: ./atcoder/$dir"; exit 1; }
 
-for f in a.py b.py c.py; do
+for f in a.py b.py c.py d.py; do
   file="./atcoder/$dir/$f"
   if [ -e "$file" ]; then
     echo "既に存在します: $file"
