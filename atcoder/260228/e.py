@@ -1,0 +1,76 @@
+from re import A
+import os,sys,random,threading
+from random import randint,choice,shuffle
+#randint(a,b)[a,b]の範囲からランダムに数を選択
+#choice(seq)seqはリスト、タプルまたは文字列で、seqからランダムに要素を選択
+#shuffle(x)可変シーケンスxの要素をシャッフル
+from copy import deepcopy
+from collections import Counter,defaultdict,deque
+from itertools import accumulate,combinations,permutations
+#accumulate(a)シーケンスaから累積イテレータを生成、通常はリスト化して前に[0]を置いて累積和に使用
+#combinations(a,k)シーケンスaからk個を選ぶ 組み合わせイテレータ
+#permutations(a,k)シーケンスaからk個を選ぶ 順列イテレータ
+from math import ceil,floor,sqrt,pi,factorial,gcd,log,log10,log2,inf
+from tokenize import group
+#ceil切り上げ、floor切り捨て、sqrt平方根、factorial階乗
+input = lambda: sys.stdin.readline().rstrip("\r\n")
+MI = lambda :map(int,input().split())
+
+ls = lambda :list(input().split())                      # 文字列リスト
+li = lambda :list(MI())                                 # 整数リスト
+ii = lambda :int(input())                                    # 整数
+inf = 1<<60
+pY = lambda :print("YES")
+pN = lambda :print("NO")
+py = lambda :print("Yes")
+pn = lambda :print("No")
+
+########################################################
+
+N, M = MI()
+
+groups = dict()
+group_cnt = 0
+
+d = dict()
+for i in range(N):
+    d[i] = -1
+
+
+edges = []
+
+for m in range(M):
+    U, V = MI()
+    edges.append((U, V))
+edges.reverse()
+
+
+
+for u, v in edges:
+    if d[u] == -1 and d[v] == -1:
+        groups[group_cnt].add({u, v})
+        d[u] = group_cnt
+        d[v] = group_cnt
+        group_cnt += 1
+    elif d[u] != -1 and d[v] == -1:
+        if len(groups[d[u]]) != N-1:
+            groups[d[u]].add(v)
+            d[v] = d[u]
+        else:   # 入れちゃだめ
+            groups[group_cnt]
+            group_cnt += 1
+    elif d[v] != -1 and d[u] == -1:
+        if len(groups[0]) == N-1:
+            pass
+            # 入れちゃだめ
+    else:   # 両方何かに入っていた場合
+        if len(groups[d[u]]) + len(groups[d[v]]) == N:  # 1本になる -> だめ
+            pass # 入れちゃだめ
+        else:
+            
+
+
+        
+
+
+    
