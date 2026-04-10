@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "Mac (Homebrew GCC)",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/homebrew/include/c++/15",
+                "/opt/homebrew/include/c++/15/aarch64-apple-darwin25",
+                "/opt/homebrew/include/c++/15/backward",
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include",
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include"
+            ],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks",
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "defines": [],
+            "compilerPath": "/opt/homebrew/bin/g++",
+            "compilerArgs": ["-std=c++17"],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-gcc-arm64"
+        }
+    ],
+    "version": 4
+}
