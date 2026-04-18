@@ -12,7 +12,7 @@ from collections import (
     defaultdict,        # defaultdict(int)      キー生成のいらないdict 初期値0で自動で初期化してくれる defaultdict(lambda: defaultdict(int))
     deque               # q = deque()           キュー
 )
-from itertools import ( # これらは
+from itertools import ( # イテレータを生成する関数が入っている
     accumulate,         # accumulate(l)         累積和の時使える            for a in accumulate(l): print(a)
     combinations,       # combinations(seq, k)  seqからk個選ぶ組み合わせ    for i in combinations(l, 2): print(i)
     permutations,       # permutations(seq, k)  seqからk個並べる並び方      for i in permutations(l, 2): print(i)

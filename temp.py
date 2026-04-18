@@ -9,8 +9,10 @@ from itertools import accumulate,combinations,permutations,product,combinations_
 #accumulate(l) 累積和に使用 for v in accumulate(l): print(v)
 #combinations(seq,k) シーケンスseqからk個を選ぶ 組み合わせイテレータ
 #permutations(seq,k) シーケンスseqからk個を選ぶ 順列イテレータ
+#product(seq,repeat=k) シーケンスseqからk個を選ぶ 直積イテレータ
+#combinations_with_replacement(seq,k) シーケンスseqからk個を選ぶ 重複組み合わせイテレータ
 from math import ceil,floor,sqrt,pi,factorial,gcd,log,log10,log2,inf
-#ceil切り上げ、floor切り捨て、sqrt平方根、factorial階乗
+#ceil(x) xを切り上げ floor(x) xを切り捨て factorial(x) xの階乗 gcd(x,y) 最大公約数
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 MI = lambda :map(int,input().split())
 
